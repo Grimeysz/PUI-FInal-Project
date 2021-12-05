@@ -23,30 +23,17 @@ $(document).ready(function () {
     opacity: "1",
     fontSize: "7rem"
   });
-
-  var $link = $("#img1");
-  var $box = $("#box");
-
-  $link
-    .mouseenter(function () {
-      clearTimeout($box.data("timeoutId"));
-      $box.show(200);
-    })
-    .mouseleave(function () {
-      var timeoutId = setTimeout(function () {
-        $box.hide(200);
-      }, 650);
-      $box.data("timeoutId", timeoutId);
-    });
-
-  $box
-    .mouseenter(function () {
-      clearTimeout($box.data("timeoutId"));
-    })
-    .mouseleave(function () {
-      var timeoutId = setTimeout(function () {
-        $box.hide(200);
-      }, 650);
-      $box.data("timeoutId", timeoutId);
-    });
 });
+
+function hoverdiv(e, divid) {
+  var left = e.clientX + "px";
+  var top = e.clientY + "px";
+
+  var div = document.getElementById(divid);
+
+  div.style.left = left;
+  div.style.top = top;
+
+  $("#" + divid).toggle();
+  return false;
+}

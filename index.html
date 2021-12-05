@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Static Template</title>
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      async
-    ></script>
-    <script src="js/script.js" async></script>
-  </head>
-  <div id="navbar">
-    <a href="#home"><strong>BOOK COVERS</strong></a>
-    <div id="navbarContents">
-      <a href="index.html">Intro</a>
-      <p>/</p>
-      <a href="01.html">01</a>
-      <p>/</p>
-      <a href="#Intro">02</a>
-      <p>/</p>
-      <a href="#contact">03</a>
-    </div>
-    <a href="index.html">Contents</a>
-  </div>
-  <body class="index">
-    <div class="row-parent">
-      <div class="row">
-        <img id="img1" src="images/middleages1.jpg" alt ="A page from the Book of Hours of Jeanne d'Evreux: Arrest of Jesus and Annunciation. A red leather bound book with hand inked gothic type, contains illustrations of the bible."/>
-        <h1 id="neverjudge">NEVER <br></br>JUDGE</h1>
-        <img id="img2" src="images/middleages2.jpg" alt = "A page from the Book of Hours of Jeanne d'Evreux: Arrest of Jesus and Annunciation. A red leather bound book with hand inked gothic type, contains illustrations of the bible."/>
-        <img id="img5" src="images/1850-paperback2.webp" alt="3 black and white paperback book covers" />
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Static Template</title>
+      <script
+         src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+         async
+         ></script>
+      <script src="js/script.js" async></script>
+   </head>
+   <div id="navbar">
+      <a href="#home"><strong>BOOK COVERS</strong></a>
+      <div id="navbarContents">
+         <a href="index.html">Intro</a>
+         <p>/</p>
+         <a href="01.html">01</a>
+         <p>/</p>
+         <a href="#Intro">02</a>
+         <p>/</p>
+         <a href="#contact">03</a>
       </div>
-      <div class="row">
-        <h1 id="abook">A <br></br>BOOK</h1>
-        <img id="img3" src="images/CC2.jpg" alt="blue hand-bound leather book cover" /><img
-          id="img4"
-          src="images/CC3.jpg" alt="red hand-bound leather book cover"
-        />
-        <img id="img1" src="images/CC4.jpg" alt="light blue hand-bound leather book cover"/>
+      <a href="index.html">Contents</a>
+   </div>
+   <body class="index">
+      <div class="row-parent">
+         <div class="row">
+            <img id="img1" src="images/middleages1.jpg" onmouseover="hoverdiv(event,'img1label')" onmouseout="hoverdiv(event,'img1label')" alt ="A page from the Book of Hours of Jeanne d'Evreux: Arrest of Jesus and Annunciation. A red leather bound book with hand inked gothic type, contains illustrations of the bible."/>
+            <h1 id="neverjudge">NEVER <br></br>JUDGE</h1>
+            <img id="img2" src="images/middleages2.jpg" onmouseover="hoverdiv(event,'img1label')" onmouseout="hoverdiv(event,'img1label')" alt = "A page from the Book of Hours of Jeanne d'Evreux: Arrest of Jesus and Annunciation. A red leather bound book with hand inked gothic type, contains illustrations of the bible."/>
+            <img id="img5" src="images/1850-paperback2.webp" onmouseover="hoverdiv(event,'img5label')" onmouseout="hoverdiv(event,'img5label')" alt="3 black and white paperback book covers" />
+         </div>
+         <div class="row">
+            <h1 id="abook">A <br></br>BOOK</h1>
+            <img id="img3" src="images/CC2.jpg" alt="blue hand-bound leather book cover" onmouseover="hoverdiv(event,'img3label')" onmouseout="hoverdiv(event,'img3label')"  /><img
+               id="img4"
+               src="images/CC3.jpg" onmouseover="hoverdiv(event,'img3label')" onmouseout="hoverdiv(event,'img3label')"
+               alt="red hand-bound leather book cover"
+               />
+            <img id="img1" src="images/CC4.jpg" onmouseover="hoverdiv(event,'img3label')" onmouseout="hoverdiv(event,'img3label')"  alt="light blue hand-bound leather book cover"/>
+         </div>
+         <div class="row">
+            <img id="img5" src="images/1850-yelloback-1.webp" onmouseover="hoverdiv(event,'img6label')" onmouseout="hoverdiv(event,'img6label')" alt="3 paperback book covers shown side by side." />
+            <h1 id="byitscover">BY ITS <br></br><strong>COVER.</strong></h1>
+            <div class="intro-description">
+               <h3>A series of articles dedicated to the history of book cover design.</h3>
+               <a href="01.html" class="button">Chapter 01</a>
+            </div>
+         </div>
       </div>
-      <div class="row">
-        <img id="img5" src="images/1850-yelloback-1.webp" alit="3 paperback book covers shown side by side." />
-        <h1 id="byitscover">BY ITS <br></br><strong>COVER.</strong></h1>
-        <div class="intro-description">
-          <h3>A series of articles dedicated to the history of book cover design.</h3>
-          <a href="01.html" class="button">Chapter 01</a>
-          
-        </div>
+
+      /* DIVS THAT ONLY SHOW WHEN HOVERED */
+      <div class="divtoshow" id="img1label">
+         <p>A page from the Book of Hours of Jeanne d'Evreux</p>
       </div>
-    </div>
-    <div id="box">Surprise!</div>
-  </body>
+      <div class="divtoshow" id="img5label">
+          <p>Paperback covers, circa 1950</p>
+       </div>
+       <div class="divtoshow" id="img4label">
+          <p>light blue hand-bound leather book cover</p>
+       </div>
+       <div class="divtoshow" id="img6label">
+          <p>Yellowback Covers, circa 1850</p>
+       </div>
+       <div class="divtoshow" id="img3label">
+          <p>Leather bound color book, Circa 1880</p>
+       </div>
+   </body>
 </html>
