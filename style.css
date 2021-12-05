@@ -330,3 +330,15 @@ body {
   align-self: flex-end;
   margin-top: 40px;
 }
+
+.content a {
+  text-decoration: none;
+  color: black;
+}
+
+#box {
+  display: none;
+  border: 1px solid red;
+  margin-top: 10px;
+  padding: 10px;
+}

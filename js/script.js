@@ -24,37 +24,29 @@ $(document).ready(function () {
     fontSize: "7rem"
   });
 
-  // $(window).scroll(function () {
-  //   var winHeight = $(this).height();
-  //   var scrollTop = $(this).scrollTop();
-  //   console.log(scrollTop);
-  //   var elemHeight = $(".row").height();
-  //   var elementTop = $(".row").position().top;
-  //   if (scrollTop > 1000) {
-  //     $("#neverjudge").animate({
-  //       left: "25vw",
-  //       position: "relative",
-  //       opacity: "1"
-  //     });
-  //     $("#img2").animate({ marginLeft: "40vw", position: "relative" });
-  //     console.log("true");
-  //   }
-  //   if (scrollTop > 2000) {
-  //     $("#abook").animate({
-  //       left: "5vw",
-  //       position: "relative",
-  //       opacity: "1"
-  //     });
-  //     $("#img3").animate({ marginLeft: "40vw", position: "relative" });
-  //     console.log("true");
-  //   }
-  //   if (scrollTop > 3000) {
-  //     $("#byitscover").animate({
-  //       left: "35vw",
-  //       position: "relative",
-  //       opacity: "1"
-  //     });
-  //     console.log("true");
-  //   }
-  // });
+  var $link = $("#img1");
+  var $box = $("#box");
+
+  $link
+    .mouseenter(function () {
+      clearTimeout($box.data("timeoutId"));
+      $box.show(200);
+    })
+    .mouseleave(function () {
+      var timeoutId = setTimeout(function () {
+        $box.hide(200);
+      }, 650);
+      $box.data("timeoutId", timeoutId);
+    });
+
+  $box
+    .mouseenter(function () {
+      clearTimeout($box.data("timeoutId"));
+    })
+    .mouseleave(function () {
+      var timeoutId = setTimeout(function () {
+        $box.hide(200);
+      }, 650);
+      $box.data("timeoutId", timeoutId);
+    });
 });
