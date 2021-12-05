@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
     <title>Static Template</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      async
+    ></script>
+    <script src="js/script.js" async></script>
   </head>
   <div id="navbar">
     <a href="#home"><strong>BOOK COVERS</strong></a>
     <div id="navbarContents">
-      <a href="#Intro">Intro</a>
+      <a href="index.html">Intro</a>
       <p>/</p>
       <a href="01.html">01</a>
       <p>/</p>
@@ -21,16 +25,31 @@
     </div>
     <a href="index.html">Contents</a>
   </div>
-  <body>
-    <div class="horizontal-scroll">
-      <div class="covers-horizontal-scroll">
-        <img src="images/book1.jpg" />
-        <img src="images/book2.jpg" />
-        <img src="images/book3.jpg" />
-        <img src="images/book4.jpg" />
-        <img src="images/book5.jpg" />
+  <body class="index">
+    <div class="row-parent">
+      <div class="row">
+        <img id="img1" src="images/middleages1.jpg" />
+        <h1 id="neverjudge">NEVER <br></br>JUDGE</h1>
+        <img id="img2" src="images/middleages2.jpg" />
+        <img id="img5" src="images/1850-paperback2.webp" />
       </div>
-      <div class="big-heading"><h1>NEVER JUDGE A BOOK BY ITS COVER</h1></div>
+      <div class="row">
+        <h1 id="abook">A <br></br>BOOK</h1>
+        <img id="img3" src="images/CC2.jpg" /><img
+          id="img4"
+          src="images/CC3.jpg"
+        />
+        <img id="img1" src="images/CC4.jpg" />
+      </div>
+      <div class="row">
+        <img id="img5" src="images/1850-yelloback-1.webp" />
+        <h1 id="byitscover">BY ITS <br></br><strong>COVER.</strong></h1>
+        <div class="intro-description">
+          <h3>A series of articles dedicated to the history of book cover design.</h3>
+          <a href="01.html" class="button">Chapter 01</a>
+          
+        </div>
+      </div>
     </div>
   </body>
 </html>
